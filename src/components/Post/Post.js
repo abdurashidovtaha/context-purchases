@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import PostContext from '../../contexts/Contexts'
 import { removePostById, editExistingPost, removePostFirst, removePostCancel, getAllPosts, addToTotalSum, subtractFromTotalSum, showDescription } from '../../actions/actionCreators';
 import Loader from '../Loader/Loader';

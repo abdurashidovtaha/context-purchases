@@ -36,7 +36,7 @@ export default function Posts() {
 
     return (
         <div>
-            {loading && <loader />}
+            {loading && <Loader />}
             {items.map(o => <Post key={o.id} item={o} />)}
             <span>total sum: </span>{state.totalSum}
             {error && errorEl}
