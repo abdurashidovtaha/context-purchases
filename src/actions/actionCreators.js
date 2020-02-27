@@ -28,7 +28,7 @@ export function fetchPostFailure(error) {
 export async function getAllPosts(dispatch) {
     dispatch(fetchPostRequest());
     try {
-        const response = await fetch("http://localhost:9999/api/posts");
+        const response = await fetch("https://requeststaha.herokuapp.com/api/posts");
         if (!response.ok) {
             throw new Error("Wrong Request");
         }
@@ -43,7 +43,7 @@ export async function getAllPosts(dispatch) {
 export async function editPost(dispatch, item) {
     dispatch(editPostRequest());
     try {
-        const response = await fetch("http://localhost:9999/api/posts", {
+        const response = await fetch("https://requeststaha.herokuapp.com/api/posts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -128,7 +128,7 @@ export function removePostCancel() {
 export async function removePostById(dispatch, id) {
     dispatch(removePostRequest());
     try {
-        const response = await fetch(`http://localhost:9999/api/posts/${id}`, {
+        const response = await fetch(`https://requeststaha.herokuapp.com/api/posts/${id}`, {
             method: "DELETE"
         });
         if (!response.ok) {
@@ -193,7 +193,7 @@ export function changeTotalSum(initialPrice, newPrice) {
 export async function showDescription(dispatch, id) {
     dispatch(showDescriptionRequest());
     try {
-        const response = await fetch(`http://localhost:9999/api/posts/desc/${id}`);
+        const response = await fetch(`https://requeststaha.herokuapp.com/api/posts/desc/${id}`);
         if (!response.ok) {
             console.log("help me2");
             throw new Error("error");
