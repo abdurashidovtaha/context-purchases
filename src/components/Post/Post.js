@@ -8,7 +8,7 @@ export default function Post({ item }) {
     const { state: { removedPost, description }, dispatch } = useContext(PostContext);
     useEffect(() => {
         dispatch(addToTotalSum(parseInt(item.price, 10)));
-    }, []);
+    }, [dispatch, item.price]);
 
     async function handleProcess(evt) {
         evt.preventDefault();
